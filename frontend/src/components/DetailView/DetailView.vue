@@ -1,11 +1,10 @@
-<template src='./VideoView.html'></template>
+<template src='./DetailView.html'></template>
 
-<script src='./VideoView.js'></script>
+<script src='./DetailView.js'></script>
 
 <style scoped>
     .card {
         margin-bottom: 10px;
-        margin-left: 1px;
         /* height: 400px; */
         border-radius: 5px;
     }
@@ -27,22 +26,26 @@
         font-size: 14px;
     }
 
-    #videoPlayerContainer {
+    #detailContainer {
         /* height: 243px; */
         height: 300px;
     }
 
-    #my-player {
-        position: absolute;
-        height: 100%;
-        width: 100%;
+    #detailGraph {
+        /* height: 243px; */
+        height: 270px;
     }
 
-    #labelsContainer {
+    div.tooltip {
         position: absolute;
-        top: 0px;
-        height: 100%;
-        width: 100%;
+        text-align: center;
+        width: 100px;
+        height: 28px;
+        padding: 2px;
+        font: 8px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
         pointer-events: none;
     }
 

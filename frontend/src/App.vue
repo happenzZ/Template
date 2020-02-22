@@ -7,13 +7,16 @@
       </nav>
       <div class="container-fluid" style="padding-left: 5px; padding-right: 5px">
           <div class="row" style="margin-left: 10px; margin-right: 10px">
-              <div class="col-6 content" style="padding-left: 3px; padding-right: 3px">
-                <VideoView :videoList="videoList" :videoId="videoId" :videoData="videoData"></VideoView>
-                <AudioView :videoId="videoId" :videoData="videoData"></AudioView>
+              <div class="col-3 content" style="padding-left: 3px; padding-right: 3px">
+                <ControlPanel :videoId="videoId" :videoData="videoData"></ControlPanel>
+                <!-- <VideoView :videoList="videoList" :videoId="videoId" :videoData="videoData"></VideoView> -->
               </div>
               <div class="col-6 content" style="padding-left: 3px; padding-right: 3px">
-                <FaceView :videoId="videoId" :videoData="videoData"></FaceView>
-                <TextView :videoId="videoId" :videoData="videoData"></TextView>
+                <StoryView :videoId="videoId" :videoData="videoData"></StoryView>
+                <DetailView :videoId="videoId" :videoData="videoData"></DetailView>
+              </div>
+              <div class="col-3 content" style="padding-left: 3px; padding-right: 3px">
+                <HumorQuery :videoId="videoId" :videoData="videoData"></HumorQuery>
               </div>
           </div>
       </div>          
@@ -23,19 +26,26 @@
 <script>
 import dataService from './service/dataService.js'
 /* global d3 $ _ */
-
-import VideoView from './components/VideoView/VideoView.vue'
-import TextView from './components/TextView/TextView.vue'
-import AudioView from './components/AudioView/AudioView.vue'
-import FaceView from './components/FaceView/FaceView.vue'
+import ControlPanel from './components/ControlPanel/ControlPanel.vue'
+import HumorQuery from './components/HumorQuery/HumorQuery.vue'
+import StoryView from './components/StoryView/StoryView.vue'
+import DetailView from './components/DetailView/DetailView.vue'
+// import VideoView from './components/VideoView/VideoView.vue'
+// import TextView from './components/TextView/TextView.vue'
+// import AudioView from './components/AudioView/AudioView.vue'
+// import FaceView from './components/FaceView/FaceView.vue'
 
 export default {
   name: 'app',
   components: {
-    VideoView,
-    TextView,
-    AudioView,
-    FaceView
+    ControlPanel,
+    // VideoView,
+    // TextView,
+    // AudioView,
+    // FaceView,
+    HumorQuery,
+    StoryView,
+    DetailView
   },
   data() {
     return {

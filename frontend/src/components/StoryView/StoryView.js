@@ -1,10 +1,10 @@
 // /* global d3 $ */
-import DrawAudio from './drawAudio.js'
+import DrawStory from './drawStory.js'
 // import dataService from '../../service/dataService.js'
 // import pipeService from '../../service/pipeService'
 
 export default {
-    name: 'AudioView',
+    name: 'StoryView',
     components: {
     },
     props: {
@@ -13,7 +13,7 @@ export default {
     },
     data() {
         return {
-            containerId: 'audioGraph',
+            containerId: 'storyGraph',
             audioData: {},
             interval: 5,
             sliding: 1
@@ -22,7 +22,7 @@ export default {
     watch: {
     },
     mounted: function () {
-        this.drawAudio = new DrawAudio(this.containerId)
+        this.drawStory = new DrawStory(this.containerId)
 
         // dataService.audioData('e271af20-cc49-4b8d-b034-bc8448529c67', this.interval, this.sliding, (data) => {
         //     this.audioData = data['data']

@@ -1,6 +1,6 @@
-<template src='./AudioView.html'></template>
+<template src='./HumorQuery.html'></template>
 
-<script src='./AudioView.js'></script>
+<script src='./HumorQuery.js'></script>
 
 <style scoped>
     .card {
@@ -26,12 +26,12 @@
         font-size: 14px;
     }
 
-    #audioContainer {
+    #humorContainer {
         /* height: 243px; */
-        height: 300px;
+        height: 648px;
     }
 
-    #audioGraph {
+    #humorqueyGraph {
         /* height: 243px; */
         height: 270px;
     }

@@ -4,6 +4,7 @@ import json
 import os
 import sys
 import cv2
+import pickle
 
 try:
     import GlobalVariable as GV
@@ -15,6 +16,33 @@ class DataService(object):
         self.GV = GV
         print('=================================================')
         return
+
+    def getKeywords(self, datasetType = "comedy"):
+        if datasetType == "ted":
+            keywordPath = os.path.join(GV.ted_control_panel,"keywords.pickle")
+        else:
+            keywordPath = os.path.join(GV.comedy_control_panel,"keywords.pickle")
+        with open(keywordPath, "rb") as f:
+            keywordsData = pickle.load(f)
+        print(keywordsData.keys())
+        print(keywordPath)
+
+        return
+
+    def getKeywordsEmbedding(self, datasetType = "comedy"):
+        if datasetType == "ted":
+            embeddingPath = os.path.join(GV.ted_control_panel,"tsne.pickle")
+        else:
+            embeddingPath = os.path.join(GV.comedy_control_panel,"tsne.pickle")
+        with open(embeddingPath, "rb") as f:
+            embeddingData = pickle.load(f)
+        
+        print(embeddingData.keys())
+        print(embeddingPath)
+
+
+        return
+
 
     def initialization(self, video_id):
         self.video_id = video_id
@@ -61,6 +89,8 @@ class DataService(object):
 if __name__ == '__main__':
     print('start')
     dataService = DataService()
+    dataService.getKeywords()
+    dataService.getKeywordsEmbedding()
 
 
 

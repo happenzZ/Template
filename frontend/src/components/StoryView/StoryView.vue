@@ -1,6 +1,6 @@
-<template src='./FaceView.html'></template>
+<template src='./StoryView.html'></template>
 
-<script src='./FaceView.js'></script>
+<script src='./StoryView.js'></script>
 
 <style scoped>
     .card {
@@ -26,9 +26,27 @@
         font-size: 14px;
     }
 
-    #faceContainer {
+    #storyContainer {
         /* height: 243px; */
         height: 300px;
+    }
+
+    #storyGraph {
+        /* height: 243px; */
+        height: 270px;
+    }
+
+    div.tooltip {
+        position: absolute;
+        text-align: center;
+        width: 100px;
+        height: 28px;
+        padding: 2px;
+        font: 8px sans-serif;
+        background: lightsteelblue;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
     }
 
 </style>

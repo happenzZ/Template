@@ -1,7 +1,7 @@
 /* global d3 $ */
 import pipeService from '../../service/pipeService'
 
-let DrawAudio= function (id) {	
+let DrawStory= function (id) {	
 	this.id = id
     this.svgWidth = $('#' + id).width()
     this.svgHeight = $('#' + id).height()
@@ -46,7 +46,7 @@ let DrawAudio= function (id) {
 
 }
 
-DrawAudio.prototype.layout = function (data) {
+DrawStory.prototype.layout = function (data) {
     d3.select('#' + this.id).select('.g_main').selectAll('g').remove()
     console.log('data: ', data)  /* eslint-disable-line */
 
@@ -350,4 +350,4 @@ DrawAudio.prototype.layout = function (data) {
     })
 }
 
-export default DrawAudio
+export default DrawStory
